@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Admin Dashboard</title>
+    
+</head>
+<body>
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="login.html">Login as Professor</a>
+    <a href="index.html">Sign out</a>
+    <a href="chat.html">Join Chat</a>
+</div>
+    <h1>Admin Dashboard</h1>
+
+
+    <span class="container1">
+    <div id="studentForm">
+        <h2>Add Student</h2>
+        <form id="addStudentForm">
+            <label for="studentID">Student ID:</label>
+            <input type="number" id="studentID" name="studentID" required>
+            <label for="studentName">Student Name:</label>
+            <input type="text" id="studentName" name="studentName" required>
+            <label for="studentLastname">Lastname:</label>
+            <input type="text" id="studentLastname" name="studentLastname" required>
+            <label for="studentEmail">Email:</label>
+            <input type="email" id="studentEmail" name="studentEmail" required>
+
+            <button type="submit">Add Student</button>
+        </form>
+    </div>
+    <div id="professorForm">
+        <h2>Add Professor</h2>
+        <form id="addProfessorForm">
+          <label for="professorID">Professor ID:</label>
+          <input type="number" id="professorID" name="professorID" required>
+          <label for="professorUsername">Username:</label>
+          <input type="text" id="professorUsername" name="professorUsername" required>
+          <label for="professorPassword">Password:</label>
+          <input type="password" id="professorPassword" name="professorPassword" required>
+      
+          <button type="submit">Add Professor</button>
+        </form>
+      </div>
+      <div id="enrollmentForm">
+        <h2>Enroll Students in Subject</h2>
+        <form id="enrollStudentsForm">
+          <label for="subjectId">Subject ID:</label>
+          <input type="number" id="subjectId" name="subjectId" required>
+          <label for="studentIds">Student IDs (comma-separated):</label>
+          <input type="text" id="studentIds" name="studentIds" required>
+      
+          <button type="submit">Enroll Students</button>
+        </form>
+      </div>
+    </span>
+    
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js"></script>
+<script src="script1.js"></script>
+<script src="script.js"></script>
+<script>
+    const socket = io(); // Initialize the socket object and connect to the server
+  </script>
+  
+</html>
