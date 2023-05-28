@@ -1,0 +1,54 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grade Statistics</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="login.html">Login as Professor</a>
+        <a href="loginadmin.html">Login as Admin</a>
+        <a href="chat.html">Join Chat</a>
+        <a href="/video">Go to Video Call</a>
+    </div>
+
+
+    <h1>Grade Statistics</h1>
+
+    <div id="studentForm">
+        <form id="addStudentForm">
+            <h3>Welcome Back!</h3>
+        <div id="overallGradeStatistics">
+     <div id="gradeStats">
+      <h2>Overall Grade Statistics</h2>
+      <p>Average Grade: <span id="averageGrade"></span></p>
+      <p>Minimum Grade: <span id="minGrade"></span></p>
+      <p>Maximum Grade: <span id="maxGrade"></span></p>
+    </div>
+  </div>
+            <label for="studentID"></label>
+            <label for="studentName"></label>
+            <label for="studentLastname"></label>
+            <label for="studentEmail"></label>
+        </form>
+    </div>
+
+    <div id="searchForm">
+        <h2>Search Student</h2>
+        <input type="number" id="searchIdInput" placeholder="Enter student ID">
+        <input type="text" id="searchNameInput" placeholder="Enter student name and lastname">
+        <button id="searchButton">Search</button>
+    </div>
+
+    <div id="content">
+        <div id="result"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>

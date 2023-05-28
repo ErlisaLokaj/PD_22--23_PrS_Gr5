@@ -1,0 +1,28 @@
+<!-- login.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Professor Login</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <h1>Professor Login</h1>
+
+    <div id="loginForm">
+        <h2>Login</h2>
+        <form id="professorLoginForm">
+            <label for="professorUsername">Username:</label>
+            <input type="text" id="professorUsername" name="professorUsername" required>
+            <label for="professorPassword">Password:</label>
+            <input type="password" id="professorPassword" name="professorPassword" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js"></script>
+    <script src="script.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>
