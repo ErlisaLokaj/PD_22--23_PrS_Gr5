@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" > -->
+        <script defer src="/socket.io/socket.io.js"" content="text/javascript"></script>    <!-- SERVER CONNECTION -->
+        <script defer src="chat.js"></script>     <!-- INCLUDING CLIENT SCRIPT --> 
+        <link rel="stylesheet" href="css/style.css">
+        <title>Chat</title>
+</head>
+<body>
+
+        <div class="navbar1">     <!-- NAVBAR -->
+            
+            <div class="user-name"> 
+                <span id="my-name" maxlength="20"> </span> <!-- USER NAME DISPLAY SECTION -->
+            </div>
+
+            <div class="leave-chat">  
+                <div class="button render-animation">
+                    <a href="index.html" onclick="javascript:window.close();">LEAVE</a> 
+                </div>
+            </div>
+        </div>
+
+            <div class="cointainer">
+
+                <div class="reciptants">
+                <div class="public-chat">
+                    <div class="client">
+                    <div class="client-name">
+                        <span id="public" onclick="current_user('public')">
+                        PUBLIC
+                    </span>
+                </div>
+                    </div>
+                </div>
+                
+                <div class="active-users">  
+                    <span>
+                        Active Users
+                    </span>
+                        <hr>
+                    </div>
+                    <!-- ACTIVE USERS SECTION -->
+                </div>
+                
+                <div class="messages-block">    
+                    <div class="messages" id="public_messages">
+                        <!-- USER JOINED / MESSAGE RECEIVED / MESSAGE SENDED SECTION -->                      
+                    </div>                      
+                    
+                    <div class="message-input">
+                        <input id="message_input" type="text">  <!-- MESSAGE INPUT FIELD -->
+                        <button class="send_button" id="public_message_send" onclick="send_message('public')"> <img src="css/icon.png" alt="" srcset=""></div></button> <!-- MESSAGE  SEND BUTTON -->
+                    </div>
+                </div>
+            </div>
+
+        </body>
+</html>

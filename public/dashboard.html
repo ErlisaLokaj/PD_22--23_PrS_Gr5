@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Professor Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="loginadmin.html">Login as Admin</a>
+        <a href="index.html">Sign out</a>
+        <a href="chat.html">Join Chat</a>
+    </div>
+    <h1>Professor Dashboard</h1>
+
+    <h2>Subjects</h2>
+    <ul id="subjectList">
+        <!-- Subject list will be dynamically populated -->
+    </ul>
+
+    <!-- Grade form container -->
+    <div id="gradeForm" style="display: none;">
+        <h3>Enter Grade</h3>
+        <input type="text" id="gradeInput" placeholder="Enter grade">
+        <button id="saveGradeButton">Save</button>
+    </div>
+
+    <!-- Subject template -->
+    <template id="subjectTemplate">
+        <div class="subject-container">
+            <details class="subject">
+                <summary></summary>
+                <div class="subject"></div>
+                <!-- Student list container -->
+                <div class="student-list"></div>
+            </details>
+        </div>
+    </template>
+
+    <!-- Student template -->
+    <template id="studentTemplate">
+        <div class="student" data-student-id="">
+            <p>
+                <span class="student-id"></span>
+                <span class="student-name"></span>
+                <span class="student-lastname"></span>
+                <span class="student-email"></span>
+                Grade: <span class="student-grade"></span>
+            </p>
+        </div>
+    </template>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
